@@ -1,0 +1,203 @@
+#!/bin/sh
+
+
+#   File name: mpi_sub
+#   Authors: Roger Tait (roger.tait@bcu.ac.uk)
+#   Date created: 7/7/2018
+
+#   Part of the mpi_sub-1.0.0 package 
+#   The Software is distributed 'as is' and is solely for non-commercial use
+
+#   Developed at Faculty of Computing, Engineering and the Built Environment
+#   Birmingham City Univerity
+#   University House
+#   Birmingham
+
+
+# Define and export in .bashrc MPISUBDIR before starting
+MPISUBDIR=/home/admin/mpi_sub-1.0.0/
+
+
+VERBOSE=0
+MPISUBDEBUGFILE="MPISUBDEBUGFILE"
+SBATCHFILE=""
+NODES=0
+TPN=50
+account=CEBE
+partition=""
+jobname=""
+allocatedtime=0
+mode=""
+
+
+Usage() {
+    	echo "Part of the mpi_sub package, mpi_sub is designed to automatically generate and submit sbatch files to the slurm workload manager"
+    	echo "Generated sbatch files permit jobs to run in serial, parallel or script modes"
+    	echo "Jobs submitted to the queue can be made to wait on each other by means of job depandancies"
+    	echo ""
+    	echo "Usage: mpi_sub -T <allocatedtime> -t <taskfile> -N <jobname>"
+    	echo ""
+    	echo "-T <allocatedtime>    Estimated job length in minutes"
+    	echo "-j <jid>              Place a hold on this task until job jid has completed"
+    	echo "-t <taskfile>         Specify a task file to execute in serial/parallel or as a script"
+    	echo "-N <jobname>          Specify jobname as it will appear in the queue"
+    	echo ""
+    	exit 1
+}
+
+[ "$1" = "" ] && Usage
+
+
+
+###########################################################################
+#
+# The following section determines the commandline arguments passed to mpi_sub
+#
+###########################################################################
+while [ "$1" != "" ] ; do
+
+	case $1 in
+    	-T)
+		allocatedtime=$2;
+      	shift;;
+    	-j)
+		jid="$2"
+		slurm_hold="--dependency=afterany:$jid"
+      	shift;;
+    	-t)
+      		taskfile=$2
+      		tasks=`wc -l $taskfile | awk '{print $1}'`
+      	shift;;
+    	-N)
+      		jobname=$2;
+      	shift;;
+  	esac
+  	shift
+done
+
+
+
+
+###########################################################################
+#
+# The following section determines the partition and resources to use based on the allocated account.
+# This should reflect QoS's defined in slurm
+# Only one account 'CEBE' currently exists!
+#
+###########################################################################
+if [ "$account" = "CEBE" ]; then
+
+	partition="cpumain"
+
+	if [[ $tasks -eq 1 ]]
+	then
+		NODES=1
+	elif [[ ( $tasks -gt 1 ) && ( $tasks -le 50 ) ]]
+	then
+		NODES=1
+	elif [[ ( $tasks -gt 50 ) && ( $tasks -le 100 ) ]]
+	then
+		NODES=2
+	else
+		#echo "More tasks than QoS allows!: "$tasks >> ${HOME}/MPISUBDEBUG
+		exit 1
+	fi
+
+else
+
+	#echo "Which Account?: "$account >> ${HOME}/MPISUBDEBUG
+	exit 1
+fi
+
+
+
+###########################################################################
+#
+# The following section determines if the task file is to be run in serial/parallel or as a script
+#
+###########################################################################
+line=$(head -1 $taskfile)
+#echo "The first line of the file is: "$line >> ${HOME}/MPISUBDEBUG
+
+if [ "$tasks" = "1" ] ; then
+	mode="Serial"
+else
+	if [ "$line" = "#!/bin/sh" ]
+	then
+		mode="Script"
+	else
+		mode="Parallel"
+	fi
+fi
+
+#echo "The file is to be run as: "$mode >> ${HOME}/MPISUBDEBUG
+
+
+
+
+###########################################################################
+#
+# The following section formats the time passed to mpi_sub so that it is understandable by slurm
+#
+###########################################################################
+hours=`echo "$allocatedtime / 60" | bc`
+hoursAsMinutes=`echo "$hours * 60" | bc`
+minutes=`echo "$allocatedtime - $hoursAsMinutes" | bc`
+printf -v hours "%02d" $hours
+printf -v minutes "%02d" $minutes
+formattedtime=$hours":"$minutes":00"
+
+
+
+
+
+###########################################################################
+#
+# The following section generates an sbatch file for submission to slurm
+#
+###########################################################################
+SBATCHFILE=${HOME}/${jobname}.${partition}.${RANDOM}.sbatch
+#echo "The file is to be run as: "$mode >> ${HOME}/MPISUBDEBUG
+
+# Allow for the manager process
+tasks=`echo "$tasks + 1" | bc`
+#echo -en "#!/bin/bash\n\n#SBATCH --job-name=${jobname}\n#SBATCH --output=${jobname}_output.txt\n#SBATCH --error=${jobname}_error.txt\n#SBATCH --partition=${partition}\n#SBATCH --nodes=${NODES}\n#SBATCH --ntasks-per-node=${TPN}\n#SBATCH --time=${formattedtime}\n#SBATCH --chdir=${PWD}\n\n\n\nmodule load openmpi-4.1.0\n\n\nsrun --mpi=pmix ${MPISUBDIR}bin/mpi_submit ${PWD}/${jobname} ${mode}\n" > $SBATCHFILE
+
+# Create an sbatch file
+echo "#!/bin/bash" >> $SBATCHFILE
+echo "" >> $SBATCHFILE
+echo "#SBATCH --job-name=${jobname}" >> $SBATCHFILE
+echo "#SBATCH --output=${jobname}_output.txt" >> $SBATCHFILE
+echo "#SBATCH --error=${jobname}_error.txt" >> $SBATCHFILE
+echo "#SBATCH --partition=${partition}" >> $SBATCHFILE
+echo "#SBATCH --nodes=${NODES}" >> $SBATCHFILE
+echo "#SBATCH --ntasks-per-node=${TPN}" >> $SBATCHFILE
+echo "#SBATCH --time=${formattedtime}" >> $SBATCHFILE
+echo "#SBATCH --chdir=${PWD}" >> $SBATCHFILE
+echo "" >> $SBATCHFILE
+echo "module load openmpi-4.1.0" >> $SBATCHFILE
+echo "" >> $SBATCHFILE
+echo "srun --mpi=pmix ${MPISUBDIR}bin/mpi_submit ${PWD}/${jobname} ${mode}" >> $SBATCHFILE
+echo "" >> $SBATCHFILE
+
+#echo -en "The sbatch file is as follows:\n\n\n#!/bin/bash\n\n#SBATCH --job-name=${jobname}\n#SBATCH --output=${jobname}_output.txt\n#SBATCH --error=${jobname}_error.txt\n#SBATCH --partition=${partition}\n#SBATCH --nodes=${NODES}\n#SBATCH --ntasks-per-node=${TPN}\n#SBATCH --time=${formattedtime}\n#SBATCH --chdir=${PWD}\n\n\n\nmodule load openmpi-4.1.0\n\n\nsrun --mpi=pmix ${MPISUBDIR}bin/mpi_submit ${PWD}/${jobname} ${mode}\n" >> ${HOME}/MPISUBDEBUG
+
+
+
+###########################################################################
+#
+# The following section submits the generated sbatch file to slurm
+#
+###########################################################################
+chmod 0700 $SBATCHFILE
+COMMAND="sbatch -J "$jobname" -A "$account" "$slurm_hold" "$SBATCHFILE
+#echo "The sbatch command to submit is: "$COMMAND >> ${HOME}/MPISUBDEBUG
+
+id=$(exec $COMMAND)
+#echo "The master process id is: "$id >> ${HOME}/MPISUBDEBUG
+id=${id//'Submitted batch job '/}
+echo $id
+
+
+
+
