@@ -1,16 +1,9 @@
-
-
-
-
 bin/mpi_sub:
 Written in bash and part of the mpi_sub-1.0.0 package, mpi_sub is designed to automatically generate and submit sbatch scripts to the slurm workload manager.
 Generated sbatch files permit jobs to run in serial, parallel or script modes of operation.
 Jobs submitted to the queue can be made to wait on each other by means of job dependencies.
 mpi_sub is primarily designed to work with structural and functional MRI pre-processing toolkits but can be employed as a general purpose batch engine.
 mpi_sub control the allocation of resources to mpi_submit and passes it a task file and mode of operation.
-
-
-
 
 bin/mpi_submit:
 Written in MPI C++ mpi_submit is based on the master/slave model of process interaction and suited too coarse and embarrassingly parallel operation.
@@ -19,17 +12,11 @@ In parallel mode, the master seeds slaves with jobs from the task file and conti
 In script mode, the master performs the	job itself (here a job being a multiple units of work).)
 mpi_submit is built against gcc-10.2.0 and openmpi-4.1.0.
 
-
-
-
 bin/mpi_sub-examplejobs.sh
 Written for user training purposes, mpi_sub-examplejobs.sh is a demonstration script that:
 1) Creates a dummy task file of 1 job and submit it to slurm!
 2) Creates a dummy task file of 100 jobs (spanning servers) and submit it to slurm!
 3) Creates a self submitting script called scriptnotbatch, that generates a dummy task file of 10 jobs which is also submitted to slurm!
-
-
-
 
 Install:
 1) Unzip mpi_sub-1.0.0.zip 
@@ -37,15 +24,9 @@ Install:
 3) Move the built mpi_submit executable into mpi_sub-1.0.0/bin
 4) Define and export in .bashrc MPISUBDIR before starting (MPISUBDIR should point to mpi_sub-1.0.0/)   
 
-
-
-
 Usage:
 > mpi_sub -T <allocatedtime> -t <taskfile> -N <jobname>
     -T <allocatedtime>    Estimated job length in minutes
     -j <jid>              Place a hold on this task until job jid has completed
     -t <taskfile>         Specify a task file to execute in serial/parallel or as a script
     -N <jobname>          Specify jobname as it will appear in the queue
-
-
-
