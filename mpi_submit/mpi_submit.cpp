@@ -222,7 +222,7 @@ void master(std::string pTaskFileName,std::string pMode)
 		// Open the task file for processing
 		std::ifstream inFile;
 		inFile.open( pTaskFileName.c_str() );
-	
+
 		if(!inFile)
 		{
 			std::cout<<"Could not open file: "<<pTaskFileName<<std::endl;
@@ -232,20 +232,15 @@ void master(std::string pTaskFileName,std::string pMode)
 		// Process in Serial
 		std::cout<<"Working on task file: "<<pTaskFileName<<" in Serial"<<std::endl;
 
-
-		//THIS COULD BE TAKEN OUT OF THE WHILE LOOP!
 		// Loop over getting new work requests until there is no more work to be done
-		while ( std::getline(inFile,line) ) 
-		{
+		std::getline(inFile,line);
+		std::memset( message,0,MESSAGESIZE);
+		std::copy( line.begin(),line.end(), message);
 
-			std::memset( message,0,MESSAGESIZE);
-			std::copy( line.begin(),line.end(), message);
+		bool ok = do_work( message,"master",1,1 );
 
-			bool ok = do_work( message,"manager",1,1 );
-
-			line.clear();
-			commandcomplete++;
-		}
+		line.clear();
+		commandcomplete++;
 
 		inFile.close();
 
@@ -260,7 +255,7 @@ void master(std::string pTaskFileName,std::string pMode)
 		std::memset( message,0,MESSAGESIZE);
 		std::copy( pTaskFileName.begin(),pTaskFileName.end(), message);
 		
-		bool ok = do_work( message,"manager",1,1 );
+		bool ok = do_work( message,"master",1,1 );
 
 		commandcomplete++;
 

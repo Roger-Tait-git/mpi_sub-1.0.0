@@ -1,0 +1,400 @@
+Start-time(sec): 1679868017
+stress: info: [311624] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+Working on task file: /home/admin/mpi_sub-1.0.0/bin/batch100 in Parallel
+stress: info: [313086] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313089] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313101] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313106] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313105] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313087] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313082] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313083] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313091] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313094] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313085] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313109] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313078] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313104] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313107] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313108] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313095] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313090] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313081] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313080] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313084] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313092] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313097] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313098] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313123] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313118] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313103] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313122] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313088] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313077] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313096] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313102] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313124] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313100] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313111] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313112] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313099] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313125] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313115] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313117] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313116] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313120] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313121] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313079] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313119] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313093] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313114] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313113] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313110] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311625] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311628] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311630] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311633] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311632] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311636] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311638] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311640] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311642] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311644] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311646] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311648] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311650] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311652] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311654] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311656] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311658] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311660] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311662] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311664] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311666] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311668] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311670] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311671] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311674] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311675] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311678] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311680] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311682] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311684] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311685] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311688] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311690] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311692] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311694] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311696] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311698] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311700] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311702] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311704] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311706] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311708] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311710] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311712] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311714] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311715] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311718] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311720] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311721] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313086] successful run completed in 120s
+
+stress: info: [313089] successful run completed in 120s
+
+stress: info: [313101] successful run completed in 120s
+
+stress: info: [313106] successful run completed in 120s
+
+stress: info: [313105] successful run completed in 120s
+
+stress: info: [313087] successful run completed in 120s
+
+stress: info: [313082] successful run completed in 120s
+
+stress: info: [313083] successful run completed in 120s
+
+stress: info: [313091] successful run completed in 120s
+
+stress: info: [313094] successful run completed in 120s
+
+stress: info: [313085] successful run completed in 120s
+
+stress: info: [313109] successful run completed in 120s
+
+stress: info: [313078] successful run completed in 120s
+
+stress: info: [313104] successful run completed in 120s
+
+stress: info: [313107] successful run completed in 120s
+
+stress: info: [313108] successful run completed in 120s
+
+stress: info: [313095] successful run completed in 120s
+
+stress: info: [313090] successful run completed in 120s
+
+stress: info: [313081] successful run completed in 120s
+
+stress: info: [313084] successful run completed in 120s
+
+stress: info: [313080] successful run completed in 120s
+
+stress: info: [313097] successful run completed in 120s
+
+stress: info: [313092] successful run completed in 120s
+
+stress: info: [313098] successful run completed in 120s
+
+stress: info: [313118] successful run completed in 120s
+
+stress: info: [313123] successful run completed in 120s
+
+stress: info: [313103] successful run completed in 120s
+
+stress: info: [313122] successful run completed in 120s
+
+stress: info: [313088] successful run completed in 120s
+
+stress: info: [313077] successful run completed in 120s
+
+stress: info: [313102] successful run completed in 120s
+
+stress: info: [313124] successful run completed in 120s
+
+stress: info: [313096] successful run completed in 120s
+
+stress: info: [313100] successful run completed in 120s
+
+stress: info: [313111] successful run completed in 120s
+
+stress: info: [313112] successful run completed in 120s
+
+stress: info: [313099] successful run completed in 120s
+
+stress: info: [313125] successful run completed in 120s
+
+stress: info: [313115] successful run completed in 120s
+
+stress: info: [313117] successful run completed in 120s
+
+stress: info: [313116] successful run completed in 120s
+
+stress: info: [313120] successful run completed in 120s
+
+stress: info: [313121] successful run completed in 120s
+
+stress: info: [313079] successful run completed in 120s
+
+stress: info: [313119] successful run completed in 120s
+
+stress: info: [313093] successful run completed in 120s
+
+stress: info: [313114] successful run completed in 120s
+
+stress: info: [313113] successful run completed in 120s
+
+stress: info: [313110] successful run completed in 120s
+
+stress: info: [313223] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [311624] successful run completed in 120s
+
+stress: info: [311625] successful run completed in 120s
+
+stress: info: [311628] successful run completed in 120s
+
+stress: info: [311630] successful run completed in 120s
+
+stress: info: [311633] successful run completed in 120s
+
+stress: info: [311632] successful run completed in 120s
+
+stress: info: [311636] successful run completed in 120s
+
+stress: info: [311638] successful run completed in 120s
+
+stress: info: [311640] successful run completed in 120s
+
+stress: info: [311642] successful run completed in 120s
+
+stress: info: [311644] successful run completed in 120s
+
+stress: info: [311646] successful run completed in 120s
+
+stress: info: [311648] successful run completed in 120s
+
+stress: info: [311650] successful run completed in 120s
+
+stress: info: [311652] successful run completed in 120s
+
+stress: info: [311654] successful run completed in 120s
+
+stress: info: [311656] successful run completed in 120s
+
+stress: info: [311658] successful run completed in 120s
+
+stress: info: [311660] successful run completed in 120s
+
+stress: info: [311662] successful run completed in 120s
+
+stress: info: [311664] successful run completed in 120s
+
+stress: info: [311666] successful run completed in 120s
+
+stress: info: [311668] successful run completed in 120s
+
+stress: info: [311670] successful run completed in 120s
+
+stress: info: [311671] successful run completed in 120s
+
+stress: info: [311674] successful run completed in 120s
+
+stress: info: [311675] successful run completed in 120s
+
+stress: info: [311678] successful run completed in 120s
+
+stress: info: [311680] successful run completed in 120s
+
+stress: info: [311682] successful run completed in 120s
+
+stress: info: [311684] successful run completed in 120s
+
+stress: info: [311685] successful run completed in 120s
+
+stress: info: [311688] successful run completed in 120s
+
+stress: info: [311690] successful run completed in 120s
+
+stress: info: [311692] successful run completed in 120s
+
+stress: info: [311694] successful run completed in 120s
+
+stress: info: [311696] successful run completed in 120s
+
+stress: info: [311698] successful run completed in 120s
+
+stress: info: [311700] successful run completed in 120s
+
+stress: info: [311702] successful run completed in 120s
+
+stress: info: [311704] successful run completed in 120s
+
+stress: info: [311706] successful run completed in 120s
+
+stress: info: [311708] successful run completed in 120s
+
+stress: info: [311710] successful run completed in 120s
+
+stress: info: [311712] successful run completed in 120s
+
+stress: info: [311714] successful run completed in 120s
+
+stress: info: [311715] successful run completed in 120s
+
+stress: info: [311718] successful run completed in 120s
+
+stress: info: [311720] successful run completed in 120s
+
+stress: info: [311721] successful run completed in 120s
+

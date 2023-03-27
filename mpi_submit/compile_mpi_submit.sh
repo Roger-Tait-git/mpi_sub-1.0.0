@@ -18,3 +18,6 @@ module load openmpi-4.1.0
 
 
 mpicxx mpi_submit.cpp -o mpi_submit
+
+rm ../bin/mpi_submit
+mv mpi_submit ../bin/

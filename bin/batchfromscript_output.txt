@@ -1,0 +1,45 @@
+Start-time(sec): 1679868168
+Working on task file: /home/admin/mpi_sub-1.0.0/bin/batchfromscript in Parallel
+stress: info: [313659] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313656] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313654] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313653] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313662] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313657] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313650] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313652] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313655] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313651] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd
+
+stress: info: [313656] successful run completed in 120s
+
+stress: info: [313659] successful run completed in 120s
+
+stress: info: [313654] successful run completed in 120s
+
+stress: info: [313653] successful run completed in 120s
+
+stress: info: [313662] successful run completed in 120s
+
+stress: info: [313657] successful run completed in 120s
+
+stress: info: [313650] successful run completed in 120s
+
+stress: info: [313652] successful run completed in 120s
+
+stress: info: [313655] successful run completed in 120s
+
+stress: info: [313651] successful run completed in 120s
+
+Start-time(sec): 1679868168 stop-time(sec): 1679868288 run-time(sec): 120
+No masters: 1 no slaves: 49
+Commands completed: 49

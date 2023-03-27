@@ -26,7 +26,7 @@ MPISUBDIR='/home/admin/mpi_sub-1.0.0'
 #
 ###########################################################################
 /bin/rm -f batch1
-echo "stress --cpu 1 --timeout 30s" >> batch1
+echo "stress --cpu 1 --timeout 120s" >> batch1
 chmod 0700 batch1
 batch1_id=`$MPISUBDIR/bin/mpi_sub -T 2 -N batch1 -t ./batch1`
 echo Running batch1: ID=$batch1_id
@@ -41,7 +41,7 @@ echo Running batch1: ID=$batch1_id
 ###########################################################################
 /bin/rm -f batch100
 for i in `seq 1 100`; do
-    echo "stress --cpu 1 --timeout 30s" >> batch100
+    echo "stress --cpu 1 --timeout 120s" >> batch100
 done
 chmod 0700 batch100
 batch100_id=`$MPISUBDIR/bin/mpi_sub -j $batch1_id -T 2 -N batch100 -t ./batch100`
@@ -59,7 +59,7 @@ cat << start_of_script > scriptnotbatch
 
 /bin/rm -f scriptnotbatch
 for i in \`seq 1 10\`; do
-    echo "stress --cpu 1 --timeout 30s" >> batchfromscript
+    echo "stress --cpu 1 --timeout 120s" >> batchfromscript
 done
 chmod 0700 batchfromscript
 batchfromscript_id=\`$MPISUBDIR/bin/mpi_sub -T 2 -N batchfromscript -t ./batchfromscript\`

@@ -1,0 +1,7 @@
+Start-time(sec): 1679868167
+Working on task file: /home/admin/mpi_sub-1.0.0/bin/scriptnotbatch as Script
+Running batchfromscript: ID=257
+
+Start-time(sec): 1679868167 stop-time(sec): 1679868167 run-time(sec): 0
+No masters: 1 no slaves: 49
+Commands completed: 1
